@@ -1,0 +1,41 @@
+@import "./mixins/mixins.scss";
+@import "./common/var.scss";
+
+@include b(button) {
+    padding: 0 12px;
+    height: 32px;
+    border: 1px solid;
+
+    @include m(mini) {
+        height: 24px;
+    }
+    @include m(samll) {
+        height: 28px;
+    }
+    @include m(medium) {
+        height: 32px;
+    }
+    @include m(large) {
+        height: 36px;
+    }
+
+    @include m(norml) {
+        // background-color: $--color-primary;
+    }
+    @include m(danger) {
+        // background-color: $--color-error;
+        
+    }
+    @include m(success) {
+        // background-color: $--color-success;
+        
+    }
+    @include m(warning) {
+        // background-color: $--color-warning;
+    }
+
+
+    @include is(round) {
+        // border-radius: 20px;
+    }
+}

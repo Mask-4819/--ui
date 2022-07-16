@@ -1,0 +1,30 @@
+// BEM: 块（block）、元素（element）、修饰符（modifier） 
+@import "../common/config.scss";
+// ps: f-button
+@mixin b($block) {
+    $B: $theme-space + "-" + $block !global;
+    .#{$B} {
+        @content;
+    }
+}
+@mixin e($element) {
+    
+}
+// ps: &--modifier
+@mixin m($modifier) {
+    $M: & + $modifier-prefix + $modifier;
+    @at-root { 
+        #{$M} {
+       @content;
+        }
+    }
+}
+
+//  ps: is-active
+@mixin is($status) {
+    @at-root { 
+        &.#{$status-prefix+$status} {
+            @content
+        }
+    }
+}

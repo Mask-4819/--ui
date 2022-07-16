@@ -1,0 +1,20 @@
+.f-button {
+  padding: 0 12px;
+  height: 32px;
+  border: 1px solid;
+}
+.f-button--mini {
+  height: 24px;
+}
+
+.f-button--samll {
+  height: 28px;
+}
+
+.f-button--medium {
+  height: 32px;
+}
+
+.f-button--large {
+  height: 36px;
+}

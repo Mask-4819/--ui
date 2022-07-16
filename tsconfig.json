@@ -1,0 +1,24 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "esModuleInterop": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "experimentalDecorators": true
+    }
+  }
+}
