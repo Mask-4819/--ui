@@ -1,13 +1,22 @@
 @import "./mixins/mixins.scss";
 @import "./common/var.scss";
 
+@mixin button-theme($color, $hover-color, $disable-color) {
+    
+}
+
 @include b(button) {
+    box-sizing: border-box;
     padding: 0 12px;
     height: 32px;
-    border: 1px solid;
-
+    border-radius: 2px;
+    background: $--color-primary;
+    color: #fff;
+    cursor: pointer;
+    
     @include m(mini) {
         height: 24px;
+        width: 100px;
     }
     @include m(samll) {
         height: 28px;
@@ -19,19 +28,19 @@
         height: 36px;
     }
 
-    @include m(norml) {
-        // background-color: $--color-primary;
+    @include m(primary) {
+        background-color: $--color-primary;
     }
-    @include m(danger) {
-        // background-color: $--color-error;
+    @include m(error) {
+        background-color: $--color-error;
         
     }
     @include m(success) {
-        // background-color: $--color-success;
+        background-color: $--color-success;
         
     }
     @include m(warning) {
-        // background-color: $--color-warning;
+        background-color: $--color-warning;
     }
 
 

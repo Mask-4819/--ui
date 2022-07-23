@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <!-- <f-button v-model="name"></f-button> -->
+  </div>
 </template>
 
 <script>
@@ -8,6 +10,7 @@ export default {
 
   data() {
     return {
+      name: "123",
       todos: [
         {
           id: 1,

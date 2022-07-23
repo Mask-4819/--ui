@@ -1,12 +1,49 @@
 // theme-color
-// $--color-primary: #165dff !global;
-// $--color-success: #00b42a !global;
-// $--color-warm: #ff7d00 !global;
-// $--color-error: #f53f3f !global;
+$--color-primary: #165dff !default;
+$--color-success: #00b42a !default;
+$--color-warning: #ff7d00 !default;
+$--color-error: #f53f3f !default;
+$--color-white: #ffffff !default;
 
+// 色调为 hover时的颜色
+$--color-primary-hover: mix($--color-primary, $--color-white, 80%) !default;
+$--color-success-hover: mix($--color-success, $--color-white, 80%) !default;
+$--color-warning-hover: mix($--color-warning, $--color-white, 80%) !default;
+$--color-error-hover: mix($--color-error, $--color-white, 80%) !default;
 
-// // txt-color
-// $--txt-color-main: #303133 !global;
-// $--txt-color-auxiliary: #606266 !global;
-// $--txt-color-secondary: #909399 !global;
-// $--txt-color-explain: #b4b8bf !global;
+// 色调为 disable是的颜色
+$--color-primary-disable: mix($--color-primary, $--color-white, 50%) !default;
+$--color-success-disable: mix($--color-success, $--color-white, 50%) !default;
+$--color-warning-disable: mix($--color-warning, $--color-white, 50%) !default;
+$--color-error-disable: mix($--color-error, $--color-white, 50%) !default;
+
+// 边框颜色
+$--color-border: #DFE3EC !default;
+
+// 文字颜色
+$--txt-color-main: #303133 !default;
+$--txt-color-auxiliary: #606266 !default;
+$--txt-color-secondary: #909399 !default;
+$--txt-color-explain: #b4b8bf !default;
+
+// 背景颜色1, (适用于message弹窗 | 按钮背景颜色)
+$--bg-color-info1: #f2f3f5 !default;
+$--bg-color-success1: #e8ffea !default;
+$--bg-color-warning1: #fff7e8 !default;
+$--bg-color-error1: #ffece8 !default;
+
+// 背景颜色2，适用于message弹窗
+$--bg-color-info2: #e5e6eb !default;
+$--bg-color-success2: #aff0b5 !default;
+$--bg-color-warning2: #ffe4ba !default;
+$--bg-color-error2: #fdcdc5 !default;
+
+// 背景颜色 hover (适用于背景颜色1的hover)
+$--bg-color-info-hover: #e5e6eb !default;
+$--bg-color-success-hover: #aff0b5 !default;
+$--bg-color-warning-hover: #ffe4ba !default;
+$--bg-color-error-hover: #fdcdc5 !default;
+
+// active时的背景颜色
+$--bg-color-active1: #e8f3ff !default;
+$--bg-color-active2: #f2f3f5 !default;

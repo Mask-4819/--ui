@@ -3,13 +3,13 @@ import { createPinia } from 'pinia'
 
 import App from './App'
 import router from './router'
-import "./assets/base.css"
-import "./assets/app.css"
-import "../packages/theme-style/lib/index.css"
-
+import "./assets/style/index.scss";
+import "../packages/theme-style/lib/index.css";
+import ui from "@--ui";
 
 const app = createApp(App);
-app.use(createPinia())
-app.use(router)
+app.use(ui);
+app.use(createPinia());
+app.use(router);
 
-app.mount('#app')
+app.mount('#app');
