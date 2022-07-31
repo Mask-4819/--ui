@@ -9,7 +9,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      "@--ui": fileURLToPath(new URL('./packages/src/index.ts', import.meta.url))
+      '@--ui': fileURLToPath(
+        new URL('./packages/src/index.ts', import.meta.url)
+      )
     }
   },
   optimizeDeps: {

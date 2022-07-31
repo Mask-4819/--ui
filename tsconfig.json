@@ -13,7 +13,7 @@
   ],
   "compilerOptions": {
     "jsx": "preserve",
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "ts-node": {
     "compilerOptions": {

@@ -6,21 +6,20 @@
 
 <script>
 export default {
-  name: "TodoApp",
-
+  name: 'TodoApp',
   data() {
     return {
-      name: "123",
+      name: '123',
       todos: [
         {
           id: 1,
-          text: "Learn Vue.js 3",
-          completed: false,
-        },
-      ],
-    };
-  },
-};
+          text: 'Learn Vue.js 3',
+          completed: false
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style>
