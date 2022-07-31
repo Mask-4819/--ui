@@ -1,34 +1,35 @@
+@import '../icon/iconfont.css';
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .demo-page {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
 }
 .demo-header {
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 0 4px #00000054;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 0 4px #00000054;
 }
 .demo-body {
-    display: flex;
-    height: calc(100% - 50px);
-    .demo-aside {
-        width: 40%;
-        border-right: 1px solid #DFE3EC;
-    }
+  display: flex;
+  height: calc(100% - 50px);
+  .demo-aside {
+    width: 40%;
+    border-right: 1px solid #dfe3ec;
+  }
 
-    .demo-main {
-        width: 60%;
-        .demo-main__content {
-            padding: 12px;
-        }
+  .demo-main {
+    width: 60%;
+    .demo-main__content {
+      padding: 12px;
     }
+  }
 }

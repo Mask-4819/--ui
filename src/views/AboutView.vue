@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- <f-button v-model="name"></f-button> -->
+    <i class="iconfont">&#xe891;</i>
   </div>
 </template>
 
