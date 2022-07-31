@@ -1,9 +1,9 @@
-import button from "../components/button/src/button";
+import button from '../components/button/src/button'
 
-const install = function(app, opts = {}){
-    app.component(button.name, button);
+const install = function (app, opts = {}) {
+  app.component(button.name, button)
 }
 
 export default {
-    install
+  install
 }
