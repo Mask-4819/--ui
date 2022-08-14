@@ -6,43 +6,52 @@ import {
   watch,
   toRefs,
   onMounted
-} from 'vue'
-import JsonEditor from '@/components/JsonEditor'
+} from 'vue';
+import JsonEditor from '@/components/JsonEditor';
+import { Message } from '@--ui';
 export default defineComponent({
   name: 'HomeView',
-  setup(props) {
-    const dataList = ref({ size: 'big', status: 'warning' })
-    const modelData = toRefs({ dataList })
-    watch(
-      dataList,
-      (value) => {
-        console.log({ ...modelData.dataList.value })
-      },
-      { deep: true }
-    )
+
+  setup() {
+    const showMessage = () => {
+      // console.log(Message);
+      Message();
+    };
+
     const render = () => {
       return (
         <div class="demo-page">
           <header class="demo-header">Playground</header>
           <section class="demo-body">
-            <aside class="demo-aside">
-              <h1>{dataList}</h1>
-              <JsonEditor v-model={dataList.value} />
-            </aside>
+            <aside class="demo-aside"></aside>
             <main class="demo-main">
               <div class="demo-main__content">
-                <f-button {...modelData.dataList.value}>123</f-button>
+                <f-button onClick={showMessage} size="large">
+                  1231
+                </f-button>
+                <f-icon icon="add" color="red" size={18}></f-icon>
               </div>
             </main>
           </section>
         </div>
-      )
-    }
+      );
+    };
     return {
-      render
+      render,
+      showMessage
+    };
+  },
+  mounted() {
+    // this.$message();
+    // console.log(this.$message);
+  },
+  methods: {
+    showMessage(this: { $message: () => void }) {
+      // console.log(this);
+      // this.$message();
     }
   },
   render() {
-    return this.render()
+    return this.render();
   }
-})
+});

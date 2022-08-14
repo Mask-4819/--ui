@@ -1,0 +1,5 @@
+{
+   "Button": "./components/button/index.ts",
+   "Icon": "./components/icon/index.ts",
+   "Message": "./components/message/index.ts"
+}

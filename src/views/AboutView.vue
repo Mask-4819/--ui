@@ -2,12 +2,17 @@
   <div>
     <!-- <f-button v-model="name"></f-button> -->
     <i class="iconfont">&#xe891;</i>
+    <Button>111</Button>
   </div>
 </template>
 
 <script>
+import { Button } from '@--ui';
 export default {
   name: 'TodoApp',
+  components: {
+    Button
+  },
   data() {
     return {
       name: '123',
@@ -18,9 +23,9 @@ export default {
           completed: false
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style>
