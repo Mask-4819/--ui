@@ -16,11 +16,14 @@
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "prepare": "husky install",
     "new": "ts-node build/bin/new.ts",
+    "postnew": "npm run build:entry",
+    "build:entry": "ts-node build/bin/build-entry.ts",
     "new:js": "node build/bin/new.js",
     "scss": "gulp --gulpfile packages\\theme-style\\gulpfile.js"
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "json-templater": "^1.2.0",
     "jsoneditor": "^9.9.0",
     "lodash-es": "^4.17.21",
     "pinia": "^2.0.14",
@@ -68,6 +71,7 @@
     "vite": "^2.9.9",
     "vite-plugin-require": "^1.0.0",
     "vite-plugin-require-transform": "^1.0.3",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vitest": "^0.13.0",
     "vue-tsc": "^0.35.2",
     "webpack": "^5.74.0"

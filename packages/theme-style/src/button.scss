@@ -1,50 +1,79 @@
-@import "./mixins/mixins.scss";
-@import "./common/var.scss";
+@import './mixins/mixins.scss';
+@import './common/var.scss';
 
-@mixin button-theme($color, $hover-color, $disable-color) {
-    
+@mixin button-theme($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+
+  &:hover {
+    color: $color;
+    background-color: mix($background-color, $--color-white, 80%);
+    border-color: mix($background-color, $--color-white, 80%);
+  }
+
+  &:active {
+    color: $color;
+    background-color: $background-color;
+    border-color: $border-color;
+  }
+
+  &.is-disabled {
+    &:hover,
+    &:active {
+      color: $color;
+      background-color: mix($background-color, $--color-white, 50%);
+      border-color: mix($background-color, $--color-white, 50%);
+    }
+  }
+
+  //   &:active {
+  //     color: $color;
+  //     background-color: $background-color;
+  //     border-color: $border-color;
+  //   }
 }
 
 @include b(button) {
-    box-sizing: border-box;
-    padding: 0 12px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  height: 32px;
+  border-radius: 2px;
+  background: $--color-primary;
+  border: 1px solid;
+  color: #fff;
+  cursor: pointer;
+  @include m(mini) {
+    height: 24px;
+  }
+  @include m(samll) {
+    height: 28px;
+  }
+  @include m(medium) {
     height: 32px;
-    border-radius: 2px;
-    background: $--color-primary;
-    color: #fff;
-    cursor: pointer;
-    
-    @include m(mini) {
-        height: 24px;
-        width: 100px;
-    }
-    @include m(samll) {
-        height: 28px;
-    }
-    @include m(medium) {
-        height: 32px;
-    }
-    @include m(large) {
-        height: 36px;
-    }
+  }
+  @include m(large) {
+    height: 36px;
+  }
 
-    @include m(primary) {
-        background-color: $--color-primary;
-    }
-    @include m(error) {
-        background-color: $--color-error;
-        
-    }
-    @include m(success) {
-        background-color: $--color-success;
-        
-    }
-    @include m(warning) {
-        background-color: $--color-warning;
-    }
+  @include m(normal) {
+    background-color: $--color-primary;
+    @include button-theme(#fff, $--color-primary, $--color-primary);
+  }
+  @include m(danger) {
+    background-color: $--color-error;
+    @include button-theme(#fff, $--color-error, $--color-error);
+  }
+  @include m(success) {
+    background-color: $--color-success;
+    @include button-theme(#fff, $--color-success, $--color-success);
+  }
+  @include m(warning) {
+    background-color: $--color-warning;
+    @include button-theme(#fff, $--color-warning, $--color-warning);
+  }
 
-
-    @include is(round) {
-        // border-radius: 20px;
-    }
+  @include is(round) {
+    // border-radius: 20px;
+  }
 }
